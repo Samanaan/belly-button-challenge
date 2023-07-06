@@ -76,21 +76,15 @@ function optionChanged (value) {
     // Apply the group barmode to the layout
     let layout = {
       title: "top 10 OTUs",
-      yaxis: { type: 'category' },
+      yaxis: { type: 'category',
+                title: {
+                  text: 'OTU ID'
+                }},
+      xaxis:{title: { text: 'Sample Values' }},
       transforms: [{
         type: 'sort',
         target: 'y',
         order: 'ascending',
-        yaxis: {
-          title: {
-            text: 'OTU ID',
-            font: {
-              family: 'Courier New, monospace',
-              size: 18,
-              color: '#7f7f7f'
-            }
-          }
-        }
       }]
     };
 
